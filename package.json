@@ -1,0 +1,17 @@
+{
+  "name": "frontend-mentor-challenge-manage",
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "repository": "git@github.com:fivehanz/frontend-mentor-challenge-manage.git",
+  "author": "Hanz <haniel56@zoho.eu>",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "vite": "^2.9.13"
+  }
+}
