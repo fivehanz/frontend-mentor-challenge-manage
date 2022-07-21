@@ -7,7 +7,7 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
 
-  <title>Frontend Mentor | Manage landing page</title>
+  <title>Manage landing page</title>
 
   <!-- normalize css -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
@@ -23,17 +23,24 @@
 <body>
   <header class="primary-header">
     <div class="container">
-      <a href="#"><img src="images/logo.svg" alt="manage" /></a>
-      <nav aria-label="primary" class="primary-navigation">
-        <ul role="list" class="nav-list">
-          <li><a href="#">Pricing</a></li>
-          <li><a href="#">Product</a></li>
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">Careers</a></li>
-          <li><a href="#">Community</a></li>
-        </ul>
-      </nav>
-      <button class="button">Get Started</button>
+      <div class="nav-wrapper">
+        <a href="#"><img src="images/logo.svg" alt="manage" /></a>
+        <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
+          <img class="icon-hamburger" src="images/icon-hamburger.svg" alt="" aria-hidden="true">
+          <img class="icon-close" src="images/icon-close.svg" alt="" aria-hidden="true">
+          <span class="visually-hidden">Menu</span>
+        </button>
+        <nav aria-label="primary" class="primary-navigation">
+          <ul role="list" class="nav-list" id="primary-navigation">
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">Product</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Community</a></li>
+          </ul>
+        </nav>
+        <button class="button">Get Started</button>
+      </div>
     </div>
   </header>
 
@@ -178,5 +185,6 @@
     <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a
       href="https://fivehanz.xyz">Hanz</a>.
   </div>
+  <script src="./main.js"> </script>
 </body>
 </html>
