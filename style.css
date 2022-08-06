@@ -192,6 +192,11 @@ svg {
   margin-inline: auto;
 }
 
+/* children except first one */
+.flow * + * {
+  margin-top: var(--flow-spacer, 3em);
+}
+
 .even-columns {
   display: grid;
   gap: 1rem;
@@ -204,10 +209,33 @@ svg {
   }
 }
 
+.vertical-align-center {
+  align-self: center;
+}
+
+@media (min-width: 50em) {
+  .justify-self-end-md {
+    justify-self: end;
+  }
+}
+
+.justify-self-end {
+  justify-self: end;
+}
+
 body {
   font-size: var(--fs-body);
   font-family: var(--ff-body);
   color: var(--color-primary-400);
+}
+
+p:not([class]) {
+  max-width: 32ch;
+  opacity: 0.7;
+}
+
+p[data-width="wide"] {
+  max-width: 45ch;
 }
 
 /* button */
@@ -336,4 +364,28 @@ body {
   .display-md-inline-flex {
     display: inline-flex;
   }
+}
+
+.cta {
+  position: relative;
+  isolation: isolate;
+  text-align: center;
+}
+
+@media (min-width: 50em) {
+  .cta {
+    text-align: left;
+  }
+}
+
+.cta::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("/images/bg-tablet-pattern.svg"),
+    url("/images//bg-tablet-pattern.svg");
+  z-index: -1;
+  background-position: -15rem -5rem, 80rem -42rem;
+  background-repeat: no-repeat;
+  opacity: 0.1;
 }
