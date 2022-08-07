@@ -389,3 +389,33 @@ p[data-width="wide"] {
   background-repeat: no-repeat;
   opacity: 0.1;
 }
+
+.footer-nav {
+  columns: 2;
+}
+
+.footer-nav a {
+  color: var(--color-neutral-100);
+  text-decoration: none;
+}
+
+.footer-nav li {
+  margin: 0 0 1rem 0;
+}
+
+.footer-nav a:is(:hover, :focus) {
+  color: var(--color-accent-400);
+}
+
+.primary-footer-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.primary-footer-form input {
+  border-radius: 100vw;
+  border: 0;
+  padding: var(--size-300) var(--size-400);
+  margin: 0 1rem 0 0;
+}
